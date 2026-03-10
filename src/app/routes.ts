@@ -1,14 +1,17 @@
 import { createBrowserRouter } from 'react-router';
-import LandingPage from './pages/LandingPage';
-import AuthPage from './pages/AuthPage';
-import AppLayout from './components/AppLayout';
-import DashboardPage from './pages/DashboardPage';
-import EditorPage from './pages/EditorPage';
-import ArticlePage from './pages/ArticlePage';
-import CollaborationPage from './pages/CollaborationPage';
-import ProfilePage from './pages/ProfilePage';
-import NotificationsPage from './pages/NotificationsPage';
-import SettingsPage from './pages/SettingsPage';
+import { lazy } from 'react';
+
+// Lazy load all pages for better code splitting
+const LandingPage = lazy(() => import('./pages/LandingPage'));
+const AuthPage = lazy(() => import('./pages/AuthPage'));
+const AppLayout = lazy(() => import('./components/AppLayout'));
+const DashboardPage = lazy(() => import('./pages/DashboardPage'));
+const EditorPage = lazy(() => import('./pages/EditorPage'));
+const ArticlePage = lazy(() => import('./pages/ArticlePage'));
+const CollaborationPage = lazy(() => import('./pages/CollaborationPage'));
+const ProfilePage = lazy(() => import('./pages/ProfilePage'));
+const NotificationsPage = lazy(() => import('./pages/NotificationsPage'));
+const SettingsPage = lazy(() => import('./pages/SettingsPage'));
 
 export const router = createBrowserRouter([
   { path: '/', Component: LandingPage },

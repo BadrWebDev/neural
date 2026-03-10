@@ -1,4 +1,4 @@
-import logo from "../../assets/cfeba923d48200566fbece8d9db8c4c672f0c30e.png";
+import { Sparkles } from 'lucide-react';
 
 interface LogoProps {
   size?: 'sm' | 'md' | 'lg';
@@ -12,7 +12,19 @@ export function Logo({ size = 'md', showText = true, className = '' }: LogoProps
 
   return (
     <div className={`flex items-center gap-2 ${className}`}>
-      <img src={logo} alt="NEURAL+" style={{ width: px, height: px }} className="object-contain" />
+      <div 
+        style={{ 
+          width: px, 
+          height: px,
+          background: 'linear-gradient(135deg, #1976D2 0%, #00BCD4 100%)',
+          borderRadius: '12px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <Sparkles size={px * 0.6} color="white" strokeWidth={2.5} />
+      </div>
       {showText && (
         <span
           className="font-black tracking-wide select-none"
