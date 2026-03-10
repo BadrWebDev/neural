@@ -5,7 +5,6 @@ import {
   ChevronRight, Play
 } from 'lucide-react';
 import { Logo } from '../components/Logo';
-import logoImg from 'figma:asset/cfeba923d48200566fbece8d9db8c4c672f0c30e.png';
 
 const features = [
   {
@@ -178,7 +177,7 @@ export default function LandingPage() {
 
           {/* Logo */}
           <div className="flex justify-center mb-8">
-            <img src={logoImg} alt="NEURAL+" className="w-28 h-28 object-contain" />
+            <Logo className="w-28 h-28" />
           </div>
 
           {/* Headline */}
